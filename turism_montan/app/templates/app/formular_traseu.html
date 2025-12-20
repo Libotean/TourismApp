@@ -1,0 +1,58 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header text-white">
+                    <h3 class="mb-0">{{ titlu }}</h3>
+                </div>
+                <div class="card-body">
+                    
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <h5 class="text-black mb-3 border-bottom pb-2"><strong>Detalii Generale</strong></h5>
+                        {% for field in form %}
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">{{ field.label }}</label>
+                            {{ field }}
+                            {% if field.errors %}
+                                <div class="text-danger small">{{ field.errors }}</div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+
+                        <h5 class="mb-3 mt-4 border-bottom pb-2" style="color: var(--primary-green)"><strong>Galerie Foto</strong></h5>
+                        
+                        {{ formset.management_form }}
+
+                        {% for form_img in formset %}
+                            <div class="row mb-2 align-items-center bg-light p-2 rounded">
+                                {{ form_img.id }} <div class="col-md-8">
+                                    {{ form_img.imagine }}
+                                </div>
+                                <div class="col-md-4">
+                                    {% if form_img.instance.pk %}
+                                        <div class="form-check text-danger">
+                                            {{ form_img.DELETE }} 
+                                            <label class="form-check-label">Sterge poza</label>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-carousel btn-lg">Salveaza Traseul</button>
+                            <a href="{% url 'homepage' %}" class="btn btn-outline-secondary">Anuleaza</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

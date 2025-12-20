@@ -1,0 +1,186 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="display-5 fw-bold text-success">{{ traseu.nume_traseu }}</h1>
+            <p class="text-muted mb-0">
+                <i class="bi bi-geo-alt-fill"></i> {{ traseu.zona.nume_zona }} | {{ traseu.zona.regiune }}
+            </p>
+        </div>
+        <div class="text-end">
+            <div class="bg-light p-3 rounded border">
+                <h3 class="mb-0 fw-bold text-warning">
+                    {{ medie_note|default:"0"|floatformat:1 }} <i class="bi bi-star-fill"></i>
+                </h3>
+                <small class="text-muted">{{ recenzii.count }} recenzii</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            
+            <div class="mb-4">
+                {% if traseu.imagini.first %}
+                    <img src="{{ traseu.imagini.first.imagine.url }}" class="img-fluid rounded shadow w-100" style="max-height: 500px; object-fit: cover;" alt="{{ traseu.nume_traseu }}">
+                {% else %}
+                    <img src="{% static 'imagini/munte_default.jpg' %}" class="img-fluid rounded shadow w-100" alt="Imagine default">
+                {% endif %}
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-3"><i class="bi bi-file-text"></i> Descriere Traseu</h4>
+                    <p class="card-text" style="white-space: pre-line;">{{ traseu.descriere }}</p>
+                </div>
+            </div>
+
+            {% if traseu.imagini.count > 1 %}
+            <div class="mb-5">
+                <h4 class="mb-3"><i class="bi bi-images"></i> Galerie Foto</h4>
+                <div class="row g-2">
+                    {% for img in traseu.imagini.all %}
+                        {% if not forloop.first %} <div class="col-md-4 col-6">
+                            <img src="{{ img.imagine.url }}" class="img-fluid rounded shadow-sm h-100" style="object-fit: cover;" alt="Foto traseu">
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="mb-5" id="recenzii">
+                <h3 class="border-bottom pb-2 mb-4">Recenzii si Pareri</h3>
+
+                {% if user.is_authenticated %}
+                <div class="card bg-light mb-4 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Lasa o recenzie</h5>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label class="form-label">Nota ta:</label>
+                                {{ form.evaluare }} 
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Comentariu:</label>
+                                {{ form.comentariu }}
+                            </div>
+                            <button type="submit" class="btn btn-success">Publica Recenzia</button>
+                        </form>
+                    </div>
+                </div>
+                {% else %}
+                <div class="alert alert-info">
+                    Trebuie să fii <a href="{% url 'login' %}">autentificat</a> pentru a lasa o recenzie.
+                </div>
+                {% endif %}
+
+                {% for recenzie in recenzii %}
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="fw-bold text-success">{{ recenzie.user.username }}</h6>
+                            <small class="text-muted">{{ recenzie.data_postarii|date:"d M Y" }}</small>
+                        </div>
+                        <div class="mb-2 text-warning">
+                            {% with ''|center:recenzie.evaluare as range %}
+                                {% for _ in range %}<i class="bi bi-star-fill"></i>{% endfor %}
+                            {% endwith %}
+                            <span class="text-dark ms-2 fw-bold">{{ recenzie.evaluare }}/5</span>
+                        </div>
+                        <p class="mb-0">{{ recenzie.comentariu }}</p>
+                    </div>
+                </div>
+                {% empty %}
+                <p class="text-muted fst-italic">Nu exista recenzii pentru acest traseu inca. Fii primul!</p>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+            
+            <div class="card shadow border-0 mb-4 sticky-top" style="top: 20px; z-index: 1;">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="bi bi-info-circle"></i> Detalii Tehnice</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-bar-chart-fill text-primary"></i> Dificultate</span>
+                        <span class="badge 
+                            {% if traseu.dificultate == 'usor' %}bg-success
+                            {% elif traseu.dificultate == 'mediu' %}bg-warning text-dark
+                            {% else %}bg-danger{% endif %}">
+                            {{ traseu.get_dificultate_display }}
+                        </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-signpost-2-fill text-warning"></i> Marcaj</span>
+                        <div class="d-flex gap-1">
+                            {% for marcaj in traseu.marcaje.all %}
+                                {% if marcaj.imagine %}
+                                    <img src="{{ marcaj.imagine.url }}" 
+                                        alt="{{ marcaj }}" 
+                                        title="{{ marcaj }}" 
+                                        class="img-fluid" 
+                                        style="height: 30px; width: auto;" 
+                                        data-bs-toggle="tooltip" 
+                                        data-bs-placement="top">
+                                {% else %}
+                                    <span class="badge bg-secondary">{{ marcaj }}</span>
+                                {% endif %}
+                            {% empty %}
+                                <span class="text-muted small">Nespecificat</span>
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-clock text-info"></i> Durata</span>
+                        <span class="fw-bold">{{ traseu.durata_traseu }} h</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-arrows-expand text-secondary"></i> Distanta</span>
+                        <span class="fw-bold">{{ traseu.distanta_km }} km</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-arrow-up-right text-danger"></i> Altitudine Max</span>
+                        <span class="fw-bold">{{ traseu.altitudine_maxima }} m</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-calendar-check text-success"></i> Sezon</span>
+                        <span>{{ traseu.get_sezon_recomandat_display }}</span>
+                    </li>
+                </ul>
+                
+                {% if user.is_superuser %}
+                <div class="card-body border-top">
+                    <a href="{% url 'editare_traseu' traseu.id %}" class="btn btn-outline-warning w-100">
+                        <i class="bi bi-pencil"></i> Editeaza Traseul
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body text-center py-5 bg-light">
+                    <i class="bi bi-map text-muted" style="font-size: 3rem;"></i>
+                    <p class="mt-2 text-muted">Harta interactiva va fi disponibila in curand.</p>
+                </div>
+            </div>
+
+             <div class="card shadow-sm mb-4">
+                <div class="card-body text-center py-4 bg-light">
+                    <i class="bi bi-cloud-sun text-muted" style="font-size: 3rem;"></i>
+                    <p class="mt-2 text-muted">Prognoza meteo va fi disponibila in curand.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

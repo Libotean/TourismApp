@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <h3 class="mb-4">Recenziile utilizatorului <span class="text-success">{{ user_vizat.username }}</span></h3>
+    <a href="{% url 'lista_utilizatori' %}" class="btn btn-outline-secondary mb-4">&larr; Inapoi</a>
+
+    <div class="row">
+        {% for recenzie in recenzii %}
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-light d-flex justify-content-between">
+                    <strong>{{ recenzie.traseu.nume_traseu }}</strong>
+                    <span class="text-warning fw-bold">{{ recenzie.evaluare }}/5 <i class="bi bi-star-fill"></i></span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">"{{ recenzie.comentariu }}"</p>
+                    <small class="text-muted">Postat pe: {{ recenzie.data_postarii|date:"d M Y H:i" }}</small>
+                </div>
+                <div class="card-footer bg-white text-end">
+                    <a href="{% url 'detalii_traseu' recenzie.traseu.id %}" class="btn btn-sm btn-primary">Mergi la Traseu</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="alert alert-warning">Acest utilizator nu a lasat nicio recenzie.</div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

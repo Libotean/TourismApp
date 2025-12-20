@@ -1,0 +1,155 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    
+        <div class="carousel-indicators">
+            {% for traseu in trasee_hero %}
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
+            {% endfor %}
+        </div>
+
+        <div class="carousel-inner">
+            {% for traseu in trasee_hero %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                
+                {% if traseu.imagini.all.0 %}
+                    <img class="d-block w-100 hero-img" src="{{ traseu.imagini.all.0.imagine.url }}" alt="{{ traseu.nume_traseu }}">
+                {% else %}
+                    <img class="d-block w-100 hero-img" src="/static/imagini/munte_default.jpg" alt="Imagine indisponibila">
+                {% endif %}
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5><strong>{{ traseu.nume_traseu }}</strong></h5>
+                    <p>{{ traseu.descriere }}</p>
+                    <a href="{% url 'detalii_traseu' traseu.id %}" class="btn btn-carousel">Vezi Traseu</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <div class="hero-section p-5 mt-4 mb-5 shadow-sm">
+        <div class="text-center">
+            <h1 class="display-4 mb-3">
+                Turism montan in Romania
+            </h1>
+        </div>
+    </div>
+
+    <!-- Zone Montane Section -->
+    <div class="mb-5">
+        <h2 class="section-title">
+            Zone Montane
+        </h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
+            {% for zona in zone %}
+            <div class="col">
+                <div class="card h-100 zone-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <div>
+                                <h5 class="card-title mb-1" style="color: var(--primary-green);">
+                                    {{ zona.nume_zona }}
+                                </h5>
+                                <p class="text-muted small mb-0">
+                                    {{ zona.regiune }}
+                                </p>
+                            </div>
+                        </div>
+                        <p class="card-text text-secondary">
+                            {{ zona.descriere|truncatewords:15 }}
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pt-0">
+                        <a href="{% url 'lista_trasee' %}?zona={{ zona.id }}" class="btn btn-outline-mountain btn-sm w-100">
+                            Exploreaza traseele
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="alert alert-warning d-flex align-items-center">
+                    <div>Nu exista zone montane adaugate momentan.</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Trasee Recente Section -->
+    <div class="mb-5">
+        <h2 class="section-title">
+            Trasee Adaugate Recent
+        </h2>
+        <div class="row g-4 mt-3">
+            {% for traseu in trasee %}
+            <div class="col-md-6">
+                <div class="card traseu-card shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="flex-grow-1">
+                                <h5 class="card-title mb-2" style="color: var(--primary-green);">
+                                    {{ traseu.nume_traseu }}
+                                </h5>
+                                <p class="text-muted small mb-0">
+                                    {{ traseu.zona.nume_zona }}
+                                </p>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                
+                                {% if user.is_superuser %}
+                                    <a href="{% url 'editare_traseu' traseu.id %}" 
+                                    class="btn rounded-circle shadow-sm text-white" 
+                                    style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background-color: var(--primary-green); border: none;"
+                                    title="Editeaza traseul">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                {% endif %}
+
+                                <a href="{% url 'detalii_traseu' traseu.id %}" class="btn btn-light rounded-circle shadow-sm" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-2 flex-wrap">
+                            <span class="badge badge-dificultate
+                                {% if traseu.dificultate == 'usor' %}bg-success
+                                {% elif traseu.dificultate == 'mediu' %}bg-warning text-dark
+                                {% else %}bg-danger{% endif %}">
+                                {{ traseu.dificultate|title }}
+                            </span>
+                            <span class="badge bg-light text-dark border">
+                                <i class="bi bi-clock"></i> {{ traseu.durata_traseu }} ore
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="text-center py-5">
+                    <i class="bi bi-inbox text-muted" style="font-size: 4rem;"></i>
+                    <p class="text-muted mt-3">Nu exista trasee adaugate inca.</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
