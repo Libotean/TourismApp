@@ -14,6 +14,7 @@ Deschide terminalul si descarca proiectul:
 
 ```bash
 git clone https://github.com/Libotean/TourismApp
+cd TourismApp
 cd turism_montan
 ```
 ### 2. Instalarea dependentelor
