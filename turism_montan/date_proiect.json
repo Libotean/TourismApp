@@ -1,0 +1,965 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-12-11T13:46:51.017Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Muntii Ignis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-12-11T13:47:49.266Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Banda Rosu",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-12-11T13:52:48.356Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Varful Ignis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-12-11T13:52:57.718Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Borcut Groape - Varful Ignis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-12-11T13:53:33.763Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "ImagineTraseu object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-12-11T13:54:06.814Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Recenzie object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-12-11T18:25:14.841Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Muntii Ignis",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagine reprezentativa\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-12-11T18:26:07.743Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Muntii Fagaras",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-12-11T18:26:41.076Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Muntii Bucegi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-12-11T18:27:16.284Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Cruce Albastru",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-12-11T18:29:58.134Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Traseu Creasta Fagarasului - Varful Moldoveanu",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-12-11T18:31:34.210Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Circuit Busteni - Babele - Sfinxul",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-12-11T18:34:01.375Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "ImagineTraseu object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-12-11T18:34:11.002Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "3",
+        "object_repr": "ImagineTraseu object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-12-11T18:52:05.916Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Recenzie object (1)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-12-11T18:52:32.244Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Recenzie object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-12-11T18:53:41.235Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "3",
+        "object_repr": "Recenzie object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add punct de interes",
+        "content_type": 7,
+        "codename": "add_punctdeinteres"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change punct de interes",
+        "content_type": 7,
+        "codename": "change_punctdeinteres"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete punct de interes",
+        "content_type": 7,
+        "codename": "delete_punctdeinteres"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view punct de interes",
+        "content_type": 7,
+        "codename": "view_punctdeinteres"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add zona montana",
+        "content_type": 8,
+        "codename": "add_zonamontana"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change zona montana",
+        "content_type": 8,
+        "codename": "change_zonamontana"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete zona montana",
+        "content_type": 8,
+        "codename": "delete_zonamontana"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view zona montana",
+        "content_type": 8,
+        "codename": "view_zonamontana"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add marcaj",
+        "content_type": 9,
+        "codename": "add_marcaj"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change marcaj",
+        "content_type": 9,
+        "codename": "change_marcaj"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete marcaj",
+        "content_type": 9,
+        "codename": "delete_marcaj"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view marcaj",
+        "content_type": 9,
+        "codename": "view_marcaj"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add traseu",
+        "content_type": 10,
+        "codename": "add_traseu"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change traseu",
+        "content_type": 10,
+        "codename": "change_traseu"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete traseu",
+        "content_type": 10,
+        "codename": "delete_traseu"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view traseu",
+        "content_type": 10,
+        "codename": "view_traseu"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add recenzie",
+        "content_type": 11,
+        "codename": "add_recenzie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change recenzie",
+        "content_type": 11,
+        "codename": "change_recenzie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete recenzie",
+        "content_type": 11,
+        "codename": "delete_recenzie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view recenzie",
+        "content_type": 11,
+        "codename": "view_recenzie"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add imagine traseu",
+        "content_type": 12,
+        "codename": "add_imaginetraseu"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change imagine traseu",
+        "content_type": 12,
+        "codename": "change_imaginetraseu"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete imagine traseu",
+        "content_type": 12,
+        "codename": "delete_imaginetraseu"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view imagine traseu",
+        "content_type": 12,
+        "codename": "view_imaginetraseu"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$WmwiQPq3FuO64J5eAegCtL$1DWOwjJejBy17sGZO2LxfrXj9m5i5AJR253g6NNXjpw=",
+        "last_login": "2025-12-30T17:46:23.756Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@munte.ro",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-12-11T13:17:15.099Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$YUuiReaz6lNyPKREmio18C$+cqTwv44TbFJW/MFO8Tz1n/p0khjLq42+sFVfA4d8Dc=",
+        "last_login": "2025-12-30T17:47:57.641Z",
+        "is_superuser": false,
+        "username": "Test",
+        "first_name": "",
+        "last_name": "",
+        "email": "test@munte.ro",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-12-30T17:47:28.993Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "app",
+        "model": "punctdeinteres"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "app",
+        "model": "zonamontana"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "app",
+        "model": "marcaj"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "app",
+        "model": "traseu"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "app",
+        "model": "recenzie"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "app",
+        "model": "imaginetraseu"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zhwnizbtio66jbtt6mtwsb6x24ows9kw",
+    "fields": {
+        "session_data": ".eJxVjDEOAiEQRe9CbciAAxhLe89ABmaQVQPJslsZ766bbKHtf-_9l4q0LjWuQ-Y4sTorVIffLVF-SNsA36ndus69LfOU9KbonQ597SzPy-7-HVQa9VuHzCIWU4DgEE8WCuSE3oK33jl0RxIIbLwPnksha1xKBpAYihTKTr0_zEg3vA:1vadp7:4Vf-p5jrzCHfP5qptp9j_j70QCIK-D8qXpCgEyK2Tzc",
+        "expire_date": "2026-01-13T17:47:57.656Z"
+    }
+},
+{
+    "model": "app.zonamontana",
+    "pk": 1,
+    "fields": {
+        "nume_zona": "Muntii Ignis",
+        "regiune": "Carpatii Orientali (Nord)",
+        "descriere": "Grupa muntoasa vulcanica, renumita pentru platourile sale si formatiunile stancoase (Piatra Dracului, Sfinxul).",
+        "imagine_reprezentativa": ""
+    }
+},
+{
+    "model": "app.zonamontana",
+    "pk": 2,
+    "fields": {
+        "nume_zona": "Muntii Fagaras",
+        "regiune": "Carpatii Meridionali",
+        "descriere": "Cunoscuti drept \"Alpii Transilvaniei\".",
+        "imagine_reprezentativa": ""
+    }
+},
+{
+    "model": "app.zonamontana",
+    "pk": 3,
+    "fields": {
+        "nume_zona": "Muntii Bucegi",
+        "regiune": "Carpatii Meridionali",
+        "descriere": "Unul dintre cele mai populare masive muntoase din Romania.",
+        "imagine_reprezentativa": ""
+    }
+},
+{
+    "model": "app.marcaj",
+    "pk": 1,
+    "fields": {
+        "tip": "banda",
+        "culoare": "rosu",
+        "imagine": ""
+    }
+},
+{
+    "model": "app.marcaj",
+    "pk": 2,
+    "fields": {
+        "tip": "cruce",
+        "culoare": "albastru",
+        "imagine": ""
+    }
+},
+{
+    "model": "app.punctdeinteres",
+    "pk": 1,
+    "fields": {
+        "nume_pct": "Varful Ignis",
+        "tip_pct": "varf",
+        "zona": 1,
+        "descriere": "Cel mai înalt vârf din masiv, recunoscut după releul meteo.",
+        "latitudine": "47.732700",
+        "longitudine": "23.672900",
+        "imagine": ""
+    }
+},
+{
+    "model": "app.traseu",
+    "pk": 1,
+    "fields": {
+        "nume_traseu": "Borcut Groape - Varful Ignis",
+        "zona": 1,
+        "dificultate": "dificil",
+        "durata_traseu": "5.0",
+        "distanta_km": "9.0",
+        "altitudine_maxima": 1307,
+        "sezon_recomandat": "tot_timpul",
+        "descriere": "Cel mai inalt varf din Muntii Ignis (1307m). Pe varf se afla un releu meteo vizibil din Baia Mare.",
+        "track_gpx": "",
+        "marcaje": [
+            1
+        ],
+        "puncte_interes": [
+            1
+        ]
+    }
+},
+{
+    "model": "app.traseu",
+    "pk": 2,
+    "fields": {
+        "nume_traseu": "Traseu Creasta Fagarasului - Varful Moldoveanu",
+        "zona": 2,
+        "dificultate": "expert",
+        "durata_traseu": "8.0",
+        "distanta_km": "14.0",
+        "altitudine_maxima": 2544,
+        "sezon_recomandat": "vara",
+        "descriere": "Cel mai inalt varf din Romania. Un traseu solicitant, dar spectaculos.",
+        "track_gpx": "",
+        "marcaje": [
+            1,
+            2
+        ],
+        "puncte_interes": []
+    }
+},
+{
+    "model": "app.traseu",
+    "pk": 3,
+    "fields": {
+        "nume_traseu": "Circuit Busteni - Babele - Sfinxul",
+        "zona": 3,
+        "dificultate": "mediu",
+        "durata_traseu": "4.0",
+        "distanta_km": "7.0",
+        "altitudine_maxima": 2216,
+        "sezon_recomandat": "tot_timpul",
+        "descriere": "Un traseu accesibil care duce la cele mai cunoscute formatiuni stancoase din Romania.",
+        "track_gpx": "",
+        "marcaje": [
+            2
+        ],
+        "puncte_interes": []
+    }
+},
+{
+    "model": "app.imaginetraseu",
+    "pk": 1,
+    "fields": {
+        "traseu": 1,
+        "imagine": "trasee_foto/vfIgnis.jpg",
+        "descriere": null
+    }
+},
+{
+    "model": "app.imaginetraseu",
+    "pk": 2,
+    "fields": {
+        "traseu": 2,
+        "imagine": "trasee_foto/vfMoldoveanu.jpg",
+        "descriere": null
+    }
+},
+{
+    "model": "app.imaginetraseu",
+    "pk": 3,
+    "fields": {
+        "traseu": 3,
+        "imagine": "trasee_foto/sfinxul.jpg",
+        "descriere": null
+    }
+},
+{
+    "model": "app.recenzie",
+    "pk": 1,
+    "fields": {
+        "traseu": 1,
+        "user": 1,
+        "evaluare": 5,
+        "comentariu": "Un traseu suberb, mai ales toamna!",
+        "data_postarii": "2025-12-11T13:54:06.799Z"
+    }
+},
+{
+    "model": "app.recenzie",
+    "pk": 5,
+    "fields": {
+        "traseu": 1,
+        "user": 4,
+        "evaluare": 5,
+        "comentariu": "Merita facut toamna, recomand!!",
+        "data_postarii": "2025-12-30T17:48:40.782Z"
+    }
+}
+]
